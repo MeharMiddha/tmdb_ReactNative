@@ -15,7 +15,7 @@ export default function MovieScreens() {
         <View className='w-full'>
             <SafeAreaView className='absolute z-20 w-full flex-row justify-between items-center px-4'>
                 <TouchableOpacity style={styles.background} className='rounded-xl p-1'>
-                    <ChevronLeftIcon size={28} strokeWidth={2.5} color="white" />
+                    <ChevronLeftIcon size={28} strokeWidth={2.5} color="black" />
                 </TouchableOpacity>
             </SafeAreaView>
         </View>
