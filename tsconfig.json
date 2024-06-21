@@ -13,5 +13,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-, "components/MovieList.js", "components/TrendingMovies.js"  ]
+, "components/MovieList.js", "components/TrendingMovies.js", "screens/HomeScreen.js"  ]
 }
