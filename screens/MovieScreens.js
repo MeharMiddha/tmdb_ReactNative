@@ -16,6 +16,7 @@ import { styles, theme } from "../theme/theme";
 import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
 import Cast from '../components/Cast';
+import MovieList from "@/components/MovieList";
 
 var { width, height } = Dimensions.get("window");
 const ios = Platform.OS == "ios";
@@ -26,6 +27,7 @@ export default function MovieScreens() {
   const navigation = useNavigation();
   const [isFavourite, setIsFavourite] = useState(false);
   const [cast, setCast] = useState([1,2,3,4,5]);
+  const [similarMovies, setSimilarMovies] = useState([1,2,3,4,5]);
   const { params: item } = useRoute();
   useEffect(() => {
     // call the mopvie details api
@@ -97,7 +99,8 @@ export default function MovieScreens() {
           earum cumque numquam aspernatur.
         </Text>
       </View>
-      <Cast cast={cast} />
+      <Cast navigation={navigation} cast={cast} />
+      <MovieList title="Similar Movies" hideSeeAll={true} data={similarMovies} />
     </ScrollView>
   );
 }
